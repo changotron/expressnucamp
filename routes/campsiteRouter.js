@@ -33,11 +33,11 @@ campsiteRouter.route('/:campsiteId')
 })
 
 .get((req, res) => {
-    res.end('Will send a campsite to you');
+    res.end(`Will send a campsite ${req.params.campsiteId} to you`);
 })
 
 .post((req, res) => {
-    res. end(`Will add the campsite: ${req.body.name} with description: ${req.body.description}`);
+    res. end(`Will add campsite ${req.params.campsiteId}: ${req.body.name} with description: ${req.body.description}`);
 })
 
 .put((req, res) => {
